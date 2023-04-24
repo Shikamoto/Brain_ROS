@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="input" type="Line_detection_node.py"                 name="line_detection_node"                  output="screen" 
+    respawn="true" respawn_delay="2"/>
+    <node pkg="input" type="Cam_Pub.py" 				name="Cam_Pub"  			output="screen"/>
+    <node pkg="delivery_robot_serial_handler" type="Serial_Handler.py" 				name="SerialHandler_node"  				output="screen"/>
+    <node pkg="delivery_robot_serial_handler" type="GPS.py" 				name="GPS_node"  				output="screen"/>
+</launch>

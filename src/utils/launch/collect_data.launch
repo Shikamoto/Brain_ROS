@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="input" type="Cam_Pub.py" 				name="Cam_Pub"  			output="screen"/>
+    <node pkg="delivery_robot_serial_handler" type="Serial_Handler.py" 				name="SerialHandler_node"  				output="screen"/>
+    <node pkg="delivery_robot_serial_handler" type="BlueDot.py" 				name="BlueDot_node"		output="screen"/>
+    <node pkg="rosbag" type="record" name="bag_recorder" output="screen" args="-o /home/pi/Desktop/collectData.bag /Pos /automobile/image_raw" />
+</launch>
